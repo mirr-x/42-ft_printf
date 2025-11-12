@@ -8,8 +8,8 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "ft_printf.c",
-                "libft.a",
+                "main.c",
+                "libftprintf.a",
                 "-o",
                 "main"
             ],

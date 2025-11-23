@@ -6,11 +6,11 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/23 18:54:18 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/23 20:07:14 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_printf.h"
+#include "ft_printf.h"
 
 void	get_correct_format_parameter(va_list args, char c, size_t *cn)
 {

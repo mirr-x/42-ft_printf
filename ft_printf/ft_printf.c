@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/23 20:07:14 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 00:38:38 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	get_correct_format_parameter(va_list args, char c, size_t *cn)
 		*cn += ft_puthex((size_t)va_arg(args, void *), 1);
 	else if (c == 'd' || c == 'i')
 		*cn += ft_putnbr_fd(va_arg(args, int), 1);
+	else if (c == 'u')
+		*cn += ft_putunsignd_fd();
 	else
 		*cn += ft_putchar_fd(c, 1);
 }

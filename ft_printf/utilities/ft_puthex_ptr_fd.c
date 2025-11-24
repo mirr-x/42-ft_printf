@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex_fd.c                                     :+:      :+:    :+:   */
+/*   ft_puthex_ptr_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:35:59 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/22 07:35:26 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 13:14:22 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	rec_hx(size_t num, int fd, size_t *counter)
 	ft_putchar_fd(hex_range[n], fd);
 }
 
-size_t	ft_puthex(size_t num, int fd)
+size_t	ft_puthex_ptr_fd(size_t num, int fd)
 {
 	size_t	counter;
 

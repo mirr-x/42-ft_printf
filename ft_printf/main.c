@@ -6,10 +6,10 @@ int main(void)
 {
     int result;
 
-    result = ft_printf("hel%yeah");
+    result = ft_printf("\001\002\007\v\010\f\r\n");
     printf("\n%d\n", result);
 
-    result = printf("hel%yeah");
+    result = ft_printf("\001\002\007\v\010\f\r\n");
     printf("\n%d\n", result);
 
     return 0;

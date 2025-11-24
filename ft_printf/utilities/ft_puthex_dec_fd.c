@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 13:15:09 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 15:16:40 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 15:28:39 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	rec_hx_dec(size_t num, int fd, size_t *counter, char *hex_range)
 	ft_putchar_fd(hex_range[n], fd);
 }
 
-size_t	ft_puthex_dec_fd(size_t num, int fd, int sig)
+size_t	ft_puthex_dec_fd(unsigned int num, int fd, int sig)
 {
 	char	*hex_range;
 	size_t	counter;

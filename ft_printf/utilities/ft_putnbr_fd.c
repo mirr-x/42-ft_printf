@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 10:29:35 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 10:57:21 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 11:10:32 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ int	ft_intlen(long n)
 }
 
 /* Outputs the integer 'n' to the given file descriptor 'fd'. */
-int	ft_putnbr_fd(int n, int fd)
+size_t	ft_putnbr_fd(int n, int fd)
 {
 	long	num;
-	int		len;
+	size_t	len;
 
 	num = n;
 	len = ft_intlen(num);
@@ -54,10 +54,10 @@ int	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 	}
 	rec(num, fd);
-	return (ft_intlen(n));
+	return (len);
 }
 
-int	ft_putunsignd_fd(int n, int fd)
+size_t	ft_putunsignd_fd(unsigned int n, int fd)
 {
 	
 }

@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 10:29:35 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 11:10:32 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 11:33:57 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,16 @@ size_t	ft_putnbr_fd(int n, int fd)
 	return (len);
 }
 
-size_t	ft_putunsignd_fd(unsigned int n, int fd)
+size_t	ft_putunsignd_fd(int n, int fd)
 {
-	
+	char	c;
+	size_t	len;
+
+	if (n == 0)
+		return (write(1, "0", 1));
+	len = 0;
+	len += ft_putunsignd_fd(n / 10, fd);
+	c = (n % 10) + 48;
+	write(fd, &c, 1);
+	return (len + 1);
 }

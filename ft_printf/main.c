@@ -6,11 +6,11 @@ int main(void)
 {
     int result;
 
-    result = ft_printf("%x", 90);
-    printf("%d\n", result);
+    result = ft_printf("hel%yeah");
+    printf("\n%d\n", result);
 
-    result = printf("%x", 90);
-    printf("%d\n", result);
+    result = printf("hel%yeah");
+    printf("\n%d\n", result);
 
     return 0;
 }

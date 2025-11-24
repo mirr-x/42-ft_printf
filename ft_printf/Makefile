@@ -3,8 +3,8 @@ NAME =  libftprintf.a
 CC = cc
 CFLAGS = -Wextra -Wall -Werror -c
 
-SRC = ft_printf.c utilities/ft_putchar_fd.c utilities/ft_putstr_fd.c utilities/ft_puthex_fd.c \
-	utilities/ft_strlen.c utilities/ft_putnbr_fd.c 
+SRC = ft_printf.c utilities/ft_putstr_fd.c utilities/ft_puthex_fd.c \
+	utilities/ft_putnbr_fd.c
 
 OBJ = $(SRC:.c=.o)
 

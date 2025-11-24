@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:27:20 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 11:04:47 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/24 11:45:05 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	        ft_putstr_fd(char *s, int fd);
 size_t	        ft_putchar_fd(char c, int fd);
 size_t	        ft_puthex(size_t num, int fd);
 size_t          ft_putnbr_fd(int n, int fd);
-size_t          ft_putunsignd_fd(int n, int fd);
+size_t          ft_putunsignd_fd(unsigned int n, int fd);
 
 int             ft_printf(const char *s, ...);
 

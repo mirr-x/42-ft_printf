@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 15:31:49 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/25 16:48:37 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	ft_printf(const char *s, ...)
 	size_t	i;
 	size_t	cn;
 
+	if (write(1, NULL, 0) == -1)
+		return (-1);
 	if (!s)
 		return (-1);
 	va_start(args, s);

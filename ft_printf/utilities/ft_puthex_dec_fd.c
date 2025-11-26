@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 13:15:09 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/24 15:28:39 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/26 14:23:44 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ size_t	ft_puthex_dec_fd(unsigned int num, int fd, int sig)
 	char	*hex_range;
 	size_t	counter;
 
+	if (num == 0)
+		return (write(fd, "0", 1));
 	hex_range = "0123456789abcdef";
 	if (sig == 1)
 		hex_range = "0123456789ABCDEF";

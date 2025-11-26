@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/25 16:48:37 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/26 16:00:29 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	get_correct_format_parameter(va_list args, char c, size_t *cn, int fd)
 		*cn += ft_puthex_dec_fd(va_arg(args, unsigned int), fd, 0);
 	else if (c == 'X')
 		*cn += ft_puthex_dec_fd(va_arg(args, unsigned int), fd, 1);
+	else if (c == '%')
+		*cn += ft_putchar_fd('%', fd);
 	else
 		*cn += ft_putchar_fd(c, fd);
 }
@@ -40,8 +42,6 @@ int	ft_printf(const char *s, ...)
 
 	if (write(1, NULL, 0) == -1)
 		return (-1);
-	if (!s)
-		return (-1);
 	va_start(args, s);
 	cn = 0;
 	i = 0;
@@ -50,12 +50,15 @@ int	ft_printf(const char *s, ...)
 		if (s[i] == '%')
 		{
 			i++;
-			get_correct_format_parameter(args, s[i++], &cn, 1);
-			continue ;
+			get_correct_format_parameter(args, s[i], &cn, 1);
+			i++;
 		}
-		ft_putchar_fd(s[i++], 1);
-		cn++;
+		else
+		{
+			ft_putchar_fd(s[i], 1);
+			cn++;
+			i++;
+		}
 	}
-	va_end(args);
-	return (cn);
+	return ((va_end(args)), cn);
 }

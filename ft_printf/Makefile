@@ -1,7 +1,7 @@
 NAME =  libftprintf.a
 
 CC = cc
-CFLAGS = -Wextra -Wall -Werror -c
+CFLAGS = -Wextra -Wall -Werror
 
 SRC = ft_printf.c utilities/ft_putstr_fd.c utilities/ft_puthex_ptr_fd.c \
 	utilities/ft_putnbr_fd.c utilities/ft_puthex_dec_fd.c

@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/26 16:00:29 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:24:46 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,14 @@ int	ft_printf(const char *s, ...)
 		if (s[i] == '%')
 		{
 			i++;
-			get_correct_format_parameter(args, s[i], &cn, 1);
-			i++;
+			if (s[i] == '\0')
+				return (cn);
+			get_correct_format_parameter(args, s[i++], &cn, 1);
 		}
 		else
 		{
-			ft_putchar_fd(s[i], 1);
+			ft_putchar_fd(s[i++], 1);
 			cn++;
-			i++;
 		}
 	}
 	return ((va_end(args)), cn);

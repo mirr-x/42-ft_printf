@@ -6,11 +6,12 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/26 18:24:46 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/27 15:01:01 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 void	get_correct_format_parameter(va_list args, char c, size_t *cn, int fd)
 {
@@ -40,8 +41,6 @@ int	ft_printf(const char *s, ...)
 	size_t	i;
 	size_t	cn;
 
-	if (write(1, NULL, 0) == -1)
-		return (-1);
 	va_start(args, s);
 	cn = 0;
 	i = 0;

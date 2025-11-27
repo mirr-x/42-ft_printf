@@ -3,6 +3,7 @@
     "ft_printf.h": "c",
     "string.h": "c",
     "stdio.h": "c",
-    "stdarg.h": "c"
+    "stdarg.h": "c",
+    "ft_printf_bonus.h": "c"
   }
 }

@@ -6,7 +6,7 @@
 /*   By: molahrac <molahrac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 06:08:53 by molahrac          #+#    #+#             */
-/*   Updated: 2025/11/27 21:07:25 by molahrac         ###   ########.fr       */
+/*   Updated: 2025/11/27 21:57:08 by molahrac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,14 @@ void	get_correct_format_parameter(va_list args, char c, size_t *cn, int fd)
 		*cn += ft_putchar_fd(c, fd);
 }
 
-
-// if (stdout->_file == -1)
-// 	return (-1);
 int	ft_printf(const char *s, ...)
 {
 	va_list	args;
 	size_t	i;
 	size_t	cn;
-
+	
+	if (stdout->_file == -1)
+		return (-1);
 	va_start(args, s);
 	cn = 0;
 	i = 0;

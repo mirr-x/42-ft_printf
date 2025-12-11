@@ -1,6 +1,7 @@
 ![Libft Banner](https://github.com/mirr-x/42-CC-1337/blob/main/images/github_piscine_and_common_core_banner_ft_printf.png)
 
 # 42-ft_printf
+![pp](https://camo.githubusercontent.com/56da27f57391425a37b5eb38c94eadf6ca2d3e27e9669a157bf588908cf9888b/68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e64394763516231387a6b625565667868364d4151534f66565f3958396932484d555676556c6f4c5126757371703d434155)
 
 A custom implementation of the C standard library function `printf()`. This project is part of the 42 curriculum and focuses on understanding variadic functions, format specifiers, and low-level output operations.
 

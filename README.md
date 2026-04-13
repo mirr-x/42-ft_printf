@@ -5,7 +5,6 @@
 
 A custom implementation of the C standard library function `printf()`. This project is part of the 42 curriculum and focuses on understanding variadic functions, format specifiers, and low-level output operations.
 
-
 ## [TABLE OF CONTENTS]
 
 - [Overview](#overview)
